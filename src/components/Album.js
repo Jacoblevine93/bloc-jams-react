@@ -19,6 +19,7 @@ class Album extends Component {
 			this.audioElement = document.createElement('audio');
 		  this.audioElement.src = album.songs[0].audioSrc;
 
+	}
 		play() {
 			this.audioElement.play();
 			this.setState({isPlaying:true});
@@ -44,7 +45,7 @@ class Album extends Component {
 				this.play();
 			}
 		}
-	}
+
 	render() {
 		return(
 		  <section className="album">
