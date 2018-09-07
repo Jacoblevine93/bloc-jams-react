@@ -13,7 +13,9 @@ class Album extends Component {
 		this.state = {
 			album: album,
 			currentSong: album.songs[0],
-			isPlaying: false
+			isPlaying: false//,
+			//playShow: false,
+			//pauseShow: true
 		};
 
 			this.audioElement = document.createElement('audio');
@@ -46,6 +48,20 @@ class Album extends Component {
 			}
 		}
 
+		handlePlayHover() {
+			if (this.state.isPlaying === false) {
+				document.getElementByClassName('ion-md-play').style.display = "table-cell";
+				document.getElementById('song-number').style.display = "none";
+			}
+		}
+
+		handlePlayClick() {
+			if (this.state.isPlaying === false) {
+				document.getElementByClassName('ion-md-play').style.display = "table-cell";
+				document.getElementById('song-number').style.display = "none";
+			}
+		}
+
 	render() {
 		return(
 		  <section className="album">
@@ -66,7 +82,11 @@ class Album extends Component {
             <tbody>
 						{this.state.album.songs.map( (song, index) =>
 							 <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-							 {index+1} {song.title} {song.duration}
+							 <span className="ion-md-play" style={{display: 'none'}}></span>
+							 <span className="ion-md-pause" style={{display: 'none'}}></span>
+							 <div id="song-number" style={{display: 'table-cell'}}>{index+1}</div>
+							 <div id="song-title" style={{display: 'table-cell'}}>{song.title}</div>
+							 <div id="song-duration" style={{display: 'table-cell'}}>{song.duration}</div>
 									</tr>
 						)}
             </tbody>
