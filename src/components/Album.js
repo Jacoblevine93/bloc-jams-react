@@ -59,10 +59,10 @@ class Album extends Component {
 		}
 
 		produceHoverEffect(song, index) {
-			if (this.state.isPlaying && this.state.isHover && this.state.hoveredSong) {return <td><span className="ion-md-pause"></span></td>}
-			else if (!this.state.isPlaying && this.state.isHover && this.state.hoveredSong) {return <td><span className="ion-md-play"></span></td>}
-			else if (this.state.isPlaying && !this.state.isHover && this.state.hoveredSong) {return <td><span className="ion-md-pause"></span></td>}
-			else if (!this.state.isPlaying && !this.state.isHover && this.state.hoveredSong) {return <td id="song-number">{index+1}</td> }
+			if (!this.state.isPlaying && this.state.isHover && this.state.hoveredSong === song) {return <td><span className="ion-md-play"></span></td>}
+			else if (this.state.isPlaying && !this.state.isHover && this.state.currentSong === song) {return <td><span className="ion-md-pause"></span></td>}
+			else if (this.state.isPlaying && this.state.isHover && this.state.currentSong === song) {return <td><span className="ion-md-pause"></span></td>}
+			else {return <td id="song-number" style={{display: 'table-cell'}}>{index+1}</td> }
 		}
 
 	render() {
