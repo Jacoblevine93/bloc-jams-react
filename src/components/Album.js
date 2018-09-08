@@ -85,7 +85,7 @@ class Album extends Component {
             <tbody>
 						{this.state.album.songs.map( (song, index) =>
 							 <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-							 <td id="song-number"style={{display: 'table-cell'}} onMouseEnter={() => this.handleSongHover(song), this.produceHoverEffect(song, index)} onMouseLeave={() => this.handleSongLeave(song)}>{index+1}</td>
+							 <td id="song-number"style={{display: 'table-cell'}} onMouseEnter={() => this.handleSongHover(song)} onMouseLeave={() => this.handleSongLeave(song)}>{this.produceHoverEffect(song, index)}</td>
 							 <td id="song-title" style={{display: 'table-cell'}}>{song.title}</td>
 							 <td id="song-duration" style={{display: 'table-cell'}}>{song.duration}</td>
 									</tr>
