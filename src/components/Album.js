@@ -46,7 +46,7 @@ class Album extends Component {
           this.setState({duration: this.audioElement.duration});
         },
 				volumechange: e => {
-          this.setState({duration: this.audioElement.volume});
+          this.setState({currentVolume: this.audioElement.volume});
         }
       };
       this.audioElement.addEventListener('timeupdate', this.eventListeners.timeupdate);
@@ -112,12 +112,12 @@ class Album extends Component {
 		handleTimeChange(e) {
       const newTime = this.audioElement.duration * e.target.value;
       this.audioElement.currentTime = newTime;
-      this.setState({ currentTime: newTime });
+      this.setState({currentTime: newTime});
     }
 
 		handleVolumeChange(e) {
-			const newVolume = this.audioElement.duration * e.target.value;
-			this.setState({ currentTime: newVolume });
+			const newVolume = this.audioElement.volume * e.target.value;
+			this.setState({currentVolume: newVolume});
 		}
 
 	render() {
