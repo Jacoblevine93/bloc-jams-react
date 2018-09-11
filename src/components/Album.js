@@ -16,7 +16,7 @@ class Album extends Component {
 			currentSong: album.songs[0],
 			hoveredSong: album.songs[0],
 			currentTime: 0,
-			currentVolume: 50,
+			currentVolume: .5,
 			duration: album.songs[0].duration,
 			isPlaying: false,
 			isHover: false
@@ -87,10 +87,10 @@ class Album extends Component {
 		}
 
 		produceHoverEffect(song, index) {
-			if (!this.state.isPlaying && this.state.isHover && this.state.hoveredSong === song) {return <td><span className="ion-md-play"></span></td>}
-			else if (this.state.isPlaying && !this.state.isHover && this.state.currentSong === song) {return <td><span className="ion-md-pause"></span></td>}
-			else if (this.state.isPlaying && this.state.isHover && this.state.currentSong === song) {return <td><span className="ion-md-pause"></span></td>}
-			else {return <td id="song-number" style={{display: 'table-cell'}}>{index+1}</td> }
+			if (!this.state.isPlaying && this.state.isHover && this.state.hoveredSong === song) {return <span style={{display: 'table-cell'}} className="ion-md-play"></span>}
+			else if (this.state.isPlaying && !this.state.isHover && this.state.currentSong === song) {return <span style={{display: 'table-cell'}} className="ion-md-pause"></span>}
+			else if (this.state.isPlaying && this.state.isHover && this.state.currentSong === song) {return <span style={{display: 'table-cell'}} className="ion-md-pause"></span>}
+			else {return <span style={{display: 'table-cell'}}>{index+1}</span> }
 		}
 
 		handlePrevClick() {
@@ -116,8 +116,24 @@ class Album extends Component {
     }
 
 		handleVolumeChange(e) {
-			const newVolume = this.audioElement.volume * e.target.value;
+			const newVolume = e.target.value;
+			this.audioElement.volume = newVolume;
 			this.setState({currentVolume: newVolume});
+		}
+
+		formatTime(seconds) {
+			const secondsRounded = Math.floor(seconds);
+			const minutes = (secondsRounded / 60);
+			const secondsOverAMinute = secondsRounded % 60;
+			var minutesString = minutes.toFixed(2);
+			var minutesParts= minutesString.split('.');
+			if (secondsRounded === 0) {return "0:00";}
+			else if (secondsRounded >= 1 && secondsRounded <= 9) {return "0:0" + secondsRounded.toString();}
+			else if (secondsRounded >= 10 && secondsRounded < 60 ) {return "0:" + secondsRounded.toPrecision(2);}
+			else if (secondsRounded % 60 === 0) {return minutes.toString() + ":00";}
+			else if (secondsRounded > 60 && secondsRounded % 60 !== 0 && secondsOverAMinute < 10) {return minutesParts[0].toString() + ":0" + secondsOverAMinute.toString();}
+			else if (secondsRounded > 60 && secondsRounded % 60 !== 0 && secondsOverAMinute >= 10) {return minutesParts[0].toString() + ":" + secondsOverAMinute.toString();}
+			else {return "-:--";}
 		}
 
 	render() {
@@ -142,7 +158,7 @@ class Album extends Component {
 							 <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
 							 <td id="song-number"style={{display: 'table-cell'}} onMouseEnter={() => this.handleSongHover(song)} onMouseLeave={() => this.handleSongLeave(song)}>{this.produceHoverEffect(song, index)}</td>
 							 <td id="song-title" style={{display: 'table-cell'}}>{song.title}</td>
-							 <td id="song-duration" style={{display: 'table-cell'}}>{song.duration}</td>
+							 <td id="song-duration" style={{display: 'table-cell'}}>{this.formatTime(song.duration)}</td>
 									</tr>
 						)}
             </tbody>
@@ -153,6 +169,7 @@ class Album extends Component {
 							currentTime={this.audioElement.currentTime}
 		          duration={this.audioElement.duration}
 							currentVolume={this.state.currentVolume}
+							formatTime={(seconds) => this.formatTime(seconds)}
 							handleSongClick={() => this.handleSongClick(this.state.currentSong)}
 							handlePrevClick={() => this.handlePrevClick()}
 							handleNextClick={() => this.handleNextClick()}
