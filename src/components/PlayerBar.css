@@ -1,0 +1,82 @@
+.current-time {
+  float: left;
+  color: #acacac;
+}
+
+.total-time {
+  float: right;
+  color: #acacac;
+}
+
+#volumehigh {
+ float: right;
+}
+
+#volumelow {
+ float: left;
+}
+
+.fa-volume-up {
+  color: #b3b3b3;
+}
+
+.fa-volume-down {
+  color: #b3b3b3;
+}
+
+.fa-step-backward {
+  color: #b3b3b3;
+  padding: 0px 0px 5px 0px;
+}
+
+.fa-step-forward {
+  color: #b3b3b3;
+  padding: 0px 0px 0px 0px;
+}
+
+.fa-step-forward:hover {
+  color: #ffffff;
+}
+
+.fa-pause-circle {
+  padding: 0px 40px 10px 40px;
+  color: #ffffff;
+}
+
+.fa-play-circle {
+  padding: 0px 40px 10px 40px;
+  color: #b3b3b3;
+}
+
+.fa-play-circle:hover {
+  color: #ffffff;
+}
+
+#volume-slider {
+  padding: 200px;
+}
+
+.currentTime {
+  text-align: left;
+}
+
+.totalTime {
+  text-align: right;
+}
+
+input[type='range'] {
+    background:#b3b3b3;
+    height:7px;
+    width: 340px;
+    cursor: pointer;
+}
+
+input[type='range']:hover {
+    background: #1dba53;
+    height:7px;
+}
+
+input[type='range']:active {
+    background: #1dba53;
+    height:7px;
+}

@@ -1,0 +1,84 @@
+#container-fluid {
+  background-image: linear-gradient(red, yellow);
+}
+
+#album-cover-art {
+  width: 50%;
+}
+
+#top-section {
+  background-color: #181818;
+  font-family: 'Rubik', sans-serif;
+  color: #ffffff;
+}
+
+.table-hover tbody tr:hover td {
+  background-color: #282828;
+}
+
+.table-hover {
+  width: 100%;
+}
+
+#top-spacer {
+  background-color: #181818;
+  font-family: 'Rubik', sans-serif;
+  color: #ffffff;
+  padding: 10px 20px 0px 20px;
+}
+
+#middle-section {
+  background-color: #181818;
+  font-family: 'Rubik', sans-serif;
+  color: #ffffff;
+  padding: 20px;
+  border-right: 1pt solid #ffffff;
+}
+
+#bottom-spacer {
+  background-color: #181818;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  padding: 10px 20px 20px 20px;
+}
+
+.album-cover {
+  margin: 0 auto;
+}
+
+#bottom-section {
+  background-color: #282828;
+  padding: 10px;
+  font-family: 'Rubik', sans-serif;
+}
+
+tr {
+  border-bottom: 1pt solid #282828;
+  border-top: 1pt solid #282828;
+}
+
+td {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#song-duration {
+  text-align: right;
+  padding-right: 10px;
+  color: #a0a0a0;
+}
+
+#song-number {
+  text-align: left;
+  color: #a0a0a0;
+  padding-left: 6px;
+  width: 8%;
+}
+
+#song-title {
+  text-align: left;
+}
+
+#table-right {
+  border-left: #ffffff;
+}

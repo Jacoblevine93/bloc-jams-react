@@ -1,0 +1,41 @@
+#album-cover {
+}
+
+#spacer1 {
+  padding: 20px 20px 20px 20px;
+}
+
+#album-title {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+#album-artist {
+  font-size: 16px;
+  color: #a0a0a0;
+}
+
+#album-songs {
+  font-size: 16px;
+  color: #a0a0a0;
+}
+
+#spacer2 {
+  padding: 00px 10px 0px 20px;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.image {
+ width: 75%
+}
