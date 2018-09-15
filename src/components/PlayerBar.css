@@ -1,32 +1,51 @@
 .current-time {
-  float: left;
   color: #acacac;
+  display: inline-block;
+  width: 10%;
 }
 
 .total-time {
-  float: right;
   color: #acacac;
+  display: inline-block;
+  width: 10%;
 }
 
-#volumehigh {
- float: right;
+.seek-bar {
+    background:#b3b3b3;
+    height:7px;
+    width: 80%;
+    display: inline-block;
+    cursor: pointer;
 }
 
-#volumelow {
- float: left;
+.volume-bar {
+  width: 20%;
+  height: 12px;
+  padding: 0px 0px 0px 0px;
+  margin: 37px 0px 0px 0px;
+  display: inline-block;
 }
 
 .fa-volume-up {
   color: #b3b3b3;
+  display: inline-block;
+  margin: 0px 235px 0px 8px;
 }
 
 .fa-volume-down {
+  display: inline-block;
   color: #b3b3b3;
+  margin: 0px 10px 0px 0px;
 }
 
 .fa-step-backward {
+  display: inline-block;
   color: #b3b3b3;
   padding: 0px 0px 5px 0px;
+}
+
+.fa-step-backward:hover {
+  color: #ffffff;
 }
 
 .fa-step-forward {
@@ -50,33 +69,4 @@
 
 .fa-play-circle:hover {
   color: #ffffff;
-}
-
-#volume-slider {
-  padding: 200px;
-}
-
-.currentTime {
-  text-align: left;
-}
-
-.totalTime {
-  text-align: right;
-}
-
-input[type='range'] {
-    background:#b3b3b3;
-    height:7px;
-    width: 340px;
-    cursor: pointer;
-}
-
-input[type='range']:hover {
-    background: #1dba53;
-    height:7px;
-}
-
-input[type='range']:active {
-    background: #1dba53;
-    height:7px;
 }

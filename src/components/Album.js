@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
-import { Link } from 'react-router';
 import './Album.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Album extends Component {
 	constructor(props){

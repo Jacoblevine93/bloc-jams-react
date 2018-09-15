@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './PlayerBar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class PlayerBar extends Component {
   render() {
@@ -30,19 +29,17 @@ class PlayerBar extends Component {
 					</div>
 					<div class="col-lg-4">
           <section id="volume-control">
-            <i class="fas fa-volume-down fa-1x"></i>
+            <i class="fas fa-volume-down fa-1x align-middle"></i>
             <input
               type="range"
-              className="volume-bar"
+              className="volume-bar align-middle"
               value={this.props.currentVolume}
               max="1"
               min="0"
               step="0.01"
               onChange={this.props.handleVolumeChange}
              />
-             <div id="#volumehigh">
-             <i class="fas fa-volume-up fa-1x"></i>
-              </div>
+             <i class="fas fa-volume-up fa-1x align-middle"></i>
           </section>
 					</div>
           </div>
