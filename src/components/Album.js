@@ -21,7 +21,7 @@ class Album extends Component {
 			duration: album.songs[0].duration,
 			isPlaying: false,
 			isHover: false
-
+			
 		};
 
 			this.audioElement = document.createElement('audio');
