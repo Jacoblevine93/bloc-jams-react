@@ -14,7 +14,11 @@ class App extends Component {
       <style>{'body { background-color: #181818; }'}</style>
       </Helmet>
         <header>
-          <nav>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
             <Link to="/">Home</Link>
             <Link to='/library'>Library</Link>
           </nav>
@@ -25,19 +29,9 @@ class App extends Component {
         <Route path="/album/:slug" component={Album} />
         </main>
 
-        <nav class="navbar navbar-expand-sm bg-light">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 3</a>
-          </li>
-       </ul>
-       </nav>
+
+
+
 
       </div>
     );
