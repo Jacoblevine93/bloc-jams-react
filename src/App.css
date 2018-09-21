@@ -26,3 +26,29 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.navbar-toggler-icon {
+  background-color: #181818!important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#a0a0a0' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  background-color: #181818!important;
+}
+
+.navbar-collapse {
+  background-color: #282828!important;
+}
+
+.navbar .navbar-nav .nav-item.show .nav-link:active {
+  color: #1dba53!important;
+
+}
+
+.navbar .navbar-nav .nav-item.active .nav-link:active {
+  color: #1dba53!important;
+}
+
+.navbar {
+  min-height: 50px!important;
+}

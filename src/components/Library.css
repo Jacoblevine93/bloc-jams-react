@@ -28,6 +28,12 @@ h1 {
   color: #ffffff;
 }
 
+#h1-block {
+  text-align: center!important;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
 a {
   text-decoration: none!important;
 }

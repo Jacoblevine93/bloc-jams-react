@@ -1,6 +1,3 @@
-#container-fluid {
-  background-image: linear-gradient(red, yellow);
-}
 
 #album-cover-art {
   width: 50%;
@@ -44,6 +41,7 @@
 
 .album-cover {
   margin: 0 auto;
+  padding: 20px 0px 0px 0px;
 }
 
 #bottom-section {

@@ -15,20 +15,12 @@ import './Library.css';
 
       <div id="library" class="container-fluid">
         <div id="h1-block" class="row">
-          <div class="col-lg-12"></div>
-          <h1>Library</h1>
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4">
+          <h1 className="text-center">Library</h1>
           </div>
-        <div id="album-block" class="row">
-        <div id="1" class="col-lg-1"></div>
-        <div id="2" class="col-lg-2"></div>
-        <div id="3" class="col-lg-2"></div>
-        <div id="4" class="col-lg-2"></div>
-        <div id="5" class="col-lg-2"></div>
-        <div id="6" class="col-lg-1"></div>
-        </div>
-
-
-
+          <div class="col-lg-4"></div>
+          </div>
 
       <table class="table-hover">
       <tbody>
