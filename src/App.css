@@ -38,17 +38,5 @@
 
 .navbar-collapse {
   background-color: #282828!important;
-}
-
-.navbar .navbar-nav .nav-item.show .nav-link:active {
-  color: #1dba53!important;
-
-}
-
-.navbar .navbar-nav .nav-item.active .nav-link:active {
-  color: #1dba53!important;
-}
-
-.navbar {
-  min-height: 50px!important;
+  width: 100%;
 }

@@ -40,6 +40,9 @@
   text-shadow:   none;
 }
 
-Link {
-  color: #ffffff;
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 38px;
+  }
+
 }

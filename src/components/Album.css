@@ -50,6 +50,10 @@
   font-family: 'Rubik', sans-serif;
 }
 
+#song-list {
+  padding-bottom: 0px;
+}
+
 tr {
   border-bottom: 1pt solid #282828;
   border-top: 1pt solid #282828;
@@ -79,4 +83,15 @@ td {
 
 #table-right {
   border-left: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+  #song-list {
+    padding-bottom: 0px;
+  }
+
+  .album-cover {
+    margin: 0 auto;
+    padding: 10px 0px 0px 0px;
+  }
 }
