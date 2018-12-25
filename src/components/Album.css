@@ -17,6 +17,10 @@
   width: 100%;
 }
 
+tbody {
+  cursor: default;
+}
+
 #top-spacer {
   background-color: #181818;
   font-family: 'Rubik', sans-serif;
